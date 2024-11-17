@@ -7,8 +7,14 @@ These are useful commands for dealing with EXIF data for still images using the 
 exiftool -Rating= -Good= -Pick= -Keywords= -Subject= -WeightedFlatSubject= a.jpg
 ```
 
-### Remove Date Image was Created
+### Remove Image Creation Date
 
 ```bash
-exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= -DigitalCreationDateTime=
+exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= a.jpg
+```
+
+### Modify Image Creation Date
+
+```bash
+exiftool "-DateTimeOriginal<FileModifyDate" a.jpg
 ```
