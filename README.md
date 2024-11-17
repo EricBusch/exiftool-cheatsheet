@@ -18,3 +18,15 @@ exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationT
 ```bash
 exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= -HistoryWhen= "-DateTimeOriginal<FileModifyDate" "-CreateDate<FileModifyDate" "-DigitalCreationDate<FileModifyDateTime" "-DateCreated<FileModifyDate" "-ModifyDate<FileModifyDate" "-SubSecDateTimeOriginal<FileModifyDate" "-SubSecCreateDate<FileModifyDate" a.jpg
 ```
+
+### Modify JPGs and Move to New Directory
+
+```bash
+exiftool -Rating=  -o /path/to/dest /path/to/src/*.jpg
+```
+
+### Put it all together
+
+```bash
+exiftool -Rating= -Good= -Pick= -Keywords= -Subject= -WeightedFlatSubject= exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= -HistoryWhen= "-DateTimeOriginal<FileModifyDate" "-CreateDate<FileModifyDate" "-DigitalCreationDate<FileModifyDateTime" "-DateCreated<FileModifyDate" "-ModifyDate<FileModifyDate" "-SubSecDateTimeOriginal<FileModifyDate" "-SubSecCreateDate<FileModifyDate" -o /path/to/dest /path/to/src/*.jpg
+```
