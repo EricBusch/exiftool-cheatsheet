@@ -10,11 +10,11 @@ exiftool -Rating= -Good= -Pick= -Keywords= -Subject= -WeightedFlatSubject= a.jpg
 ### Remove Image Creation Date
 
 ```bash
-exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= a.jpg
+exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= -HistoryWhen= a.jpg
 ```
 
-### Modify Image Creation Date
+### Set Image Creation Date to File Modified Date
 
 ```bash
-exiftool "-DateTimeOriginal<FileModifyDate" a.jpg
+exiftool -DateTimeOriginal= -CreateDate= -DigitalCreationDate= -DigitalCreationTime= -DateCreated= -SubSecCreateDate= -SubSecDateTimeOriginal= -HistoryWhen= "-DateTimeOriginal<FileModifyDate" "-CreateDate<FileModifyDate" "-DigitalCreationDate<FileModifyDateTime" "-DateCreated<FileModifyDate" "-ModifyDate<FileModifyDate" "-SubSecDateTimeOriginal<FileModifyDate" "-SubSecCreateDate<FileModifyDate" a.jpg
 ```
