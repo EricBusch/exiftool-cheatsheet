@@ -1,5 +1,5 @@
 # exiftool Cheat Sheet
-These are useful commands for dealing with EXIF data for still images using the [https://exiftool.org/](EXIF Tool) command line tool.
+These are useful commands for dealing with EXIF data for still images using the [EXIFTool](https://exiftool.org/) command line tool.
 
 ### Remove Ratings & Keywords
 
